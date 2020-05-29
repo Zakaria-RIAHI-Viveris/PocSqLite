@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ormliteapplication.sncf.com.sqliteapplication.ui.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llInsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/nbEntrees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="nombre d'entrée"/>
+
+        <Button
+            android:id="@+id/buttonInsert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nbEntrees"
+            android:text="remplir table"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonTestQueryForAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llInsert"
+        android:text="requete table entiere"/>
+
+    <LinearLayout
+        android:id="@+id/llquery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonTestQueryForAll"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="nombre d'entrée"/>
+
+        <Button
+            android:id="@+id/buttonTestQueryWhere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonTestQueryForAll"
+            android:text="requete condition"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSuppress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llquery"
+        android:text="suppression table entiere"/>
+
+</RelativeLayout>
